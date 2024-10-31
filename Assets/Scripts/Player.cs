@@ -3,6 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+/// <summary>
+/// Michael Parizeau
+/// 10/31/24
+/// Player movement, health, and spawning
+/// </summary>
 public class Player : MonoBehaviour
 {
     private Vector3 moveDir;
@@ -13,7 +18,7 @@ public class Player : MonoBehaviour
 
     public float deathY = -2f;
     public GameObject respawnPoint;
-    public int lives = 3;
+    public int health = 99;
     // Start is called before the first frame update
     void Start()
     {
@@ -35,23 +40,13 @@ public class Player : MonoBehaviour
             moveDir = Vector3.right;
             transform.position += moveDir * moveSpeed * Time.deltaTime;
         }
-        if (transform.position.y <= deathY)
-            Respawn();
-    }
-    public void Respawn()
-    {
-        lives--;
-
-        if (lives <= 0)
+        if (transform.position.y <= deathY && health >= 15)
         {
-            // Game Over
-            print("Game Over!");
-            // Send player to Game Over screen
-            SceneManager.LoadScene(0);
-
-            this.enabled = false;
+            transform.position = respawnPoint.transform.position;
+            health -= 15;
         }
-        else transform.position = respawnPoint.transform.position;
+        else if (transform.position.y <= deathY && health <= 15)
+            GameOver();
     }
     private void SpaceJump()
     {
@@ -73,5 +68,27 @@ public class Player : MonoBehaviour
         }
 
         return isGrounded;
+    }
+    public void LoseHealth1()
+    {
+        health-=15;
+        if (health <= 0)
+            GameOver();
+    }
+    public void LoseHealth2()
+    {
+        health -= 35;
+        if (health <= 0)
+            GameOver();
+    }
+    
+    private void GameOver()
+    {
+            // Game Over
+            print("Game Over!");
+            // Send player to Game Over screen
+            SceneManager.LoadScene(5);
+
+            this.enabled = false;
     }
 }
