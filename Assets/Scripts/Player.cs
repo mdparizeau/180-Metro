@@ -16,6 +16,8 @@ public class Player : MonoBehaviour
     public float jumpForce = 8f;
     float raycastDist = 1.2f;
 
+    public bool facingRight = true;
+
     public float deathY = -2f;
     public GameObject respawnPoint;
     public int health = 99;
@@ -33,12 +35,24 @@ public class Player : MonoBehaviour
         {
             moveDir = Vector3.left;
             transform.position += moveDir * moveSpeed * Time.deltaTime;
+            if(facingRight)
+            {
+                transform.rotation = Quaternion.Euler(0, 180, 0);
+                facingRight = false;
+            }
+            
         }
 
         if (Input.GetKey(KeyCode.D))
         {
             moveDir = Vector3.right;
             transform.position += moveDir * moveSpeed * Time.deltaTime;
+
+            if (!facingRight)
+            {
+                transform.rotation = Quaternion.Euler(0, 360, 0);
+                facingRight = true;
+            }
         }
         if (transform.position.y <= deathY && health >= 15)
         {
