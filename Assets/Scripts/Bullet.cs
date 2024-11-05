@@ -2,6 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/*
+ * Benjamin Smith Zulema C.
+ * 11/5/2024
+ * Handles the bullet behaviors
+ */
 public class Bullet : MonoBehaviour
 {
     public bool goingLeft;
@@ -14,6 +19,9 @@ public class Bullet : MonoBehaviour
         
     }
 
+    /// <summary>
+    /// Makes the bullet move left or right based on whether the goingLeft bool is true or false
+    /// </summary>
     // Update is called once per frame
     void Update()
     {
