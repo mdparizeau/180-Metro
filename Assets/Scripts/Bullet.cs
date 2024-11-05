@@ -29,4 +29,12 @@ public class Bullet : MonoBehaviour
 
         }
     }
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.GetComponent<Hazard>())
+        {
+            collision.gameObject.SetActive(false);
+        }
+        this.gameObject.SetActive(false);
+    }
 }
