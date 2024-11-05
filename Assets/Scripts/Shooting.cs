@@ -12,6 +12,7 @@ public class Shooting : MonoBehaviour
 
     public float startDelay;
     public float shotDelay;
+    public bool canShoot = true;
 
     public GameObject Bullet1;
 
@@ -41,14 +42,17 @@ public class Shooting : MonoBehaviour
 
     public void Firing()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.LeftShift))
         {
+            if(canShoot)
+            {
+                Shoot();
+                StartCoroutine(ShotDelay());
+
+
+                print("Bullet shot");
+            }
             
-            Shoot();
-            StartCoroutine(ShotDelay());
-
-
-            print("Bullet shot");
 
 
             //InvokeRepeating("Shoot", startDelay, shotDelay);
@@ -58,7 +62,9 @@ public class Shooting : MonoBehaviour
 
     IEnumerator ShotDelay()
     {
-        yield return new WaitForSeconds(5);
-        Firing();
+        canShoot = false;
+        yield return new WaitForSeconds(0.5f);
+        canShoot = true;
+        //Firing();
     }
 }
