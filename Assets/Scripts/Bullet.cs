@@ -37,12 +37,24 @@ public class Bullet : MonoBehaviour
 
         }
     }
-    private void OnCollisionEnter(Collision collision)
+    /* private void OnTriggerEnter(Collision collision)
     {
+        
         if (collision.gameObject.GetComponent<Hazard>())
         {
             collision.gameObject.SetActive(false);
+            print("you touched the enemy");
         }
-        this.gameObject.SetActive(false);
+        //this.gameObject.SetActive(false);
+    } */
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.GetComponent<Hazard>())
+        {
+            other.gameObject.SetActive(false);
+            print("you touched the enemy");
+        }
+        if (!other.gameObject.GetComponent<Player>())
+            this.gameObject.SetActive(false);
     }
 }
