@@ -10,7 +10,7 @@ using UnityEngine;
 public class Bullet : MonoBehaviour
 {
     public bool goingLeft;
-
+    float raycastDist = 0.5f;
     public float speed;
 
     // Start is called before the first frame update
@@ -25,17 +25,20 @@ public class Bullet : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //RaycastHit hit;
         if (goingLeft == true)
-        {
             transform.position += speed * Vector3.left * Time.deltaTime;
+        else transform.position += speed * Vector3.right * Time.deltaTime;
 
-        }
-
-        else
+        if (Physics.Raycast(transform.position, Vector3.right, raycastDist)
+            || Physics.Raycast(transform.position, Vector3.left, raycastDist))
         {
-            transform.position += speed * Vector3.right * Time.deltaTime;
+            //if (!hit.collider.GetComponent<Shooting>() && !gameObject.GetComponent<Bullet>())
+                //this.gameObject.SetActive(false);
 
         }
+        Debug.DrawRay(transform.position, Vector3.left * raycastDist, Color.red);
+        Debug.DrawRay(transform.position, Vector3.right * raycastDist, Color.red);
     }
     /* private void OnTriggerEnter(Collision collision)
     {
@@ -53,8 +56,7 @@ public class Bullet : MonoBehaviour
         {
             other.gameObject.SetActive(false);
             print("you touched the enemy");
-        }
-        if (!other.gameObject.GetComponent<Player>())
             this.gameObject.SetActive(false);
+        }
     }
 }
