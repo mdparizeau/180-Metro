@@ -21,6 +21,7 @@ public class Player : MonoBehaviour
 
     public float deathY = -2f;
     public GameObject respawnPoint;
+    public GameObject backpack;
     public int health = 99;
     // Start is called before the first frame update
     void Start()
@@ -61,6 +62,8 @@ public class Player : MonoBehaviour
         if (transform.position.y <= deathY && health >= 15)
         {
             transform.position = respawnPoint.transform.position;
+            backpack.GetComponent<Renderer>().enabled = false;
+            jumpForce = 8f;
             health -= 15;
         }
         else if (transform.position.y <= deathY && health <= 15)
@@ -125,5 +128,33 @@ public class Player : MonoBehaviour
             //removes health pack
             Destroy(other.gameObject);
         }
+        //when player comes into contact w extra health pack it will fully heal player and then add 100hp
+        if (other.GetComponent<ExtraHealthPack>())
+        {
+            health = 99;
+            //fully heals player   
+            
+            print("Adds 99 hp");
+            //adds 100 hp to player 
+            health += other.GetComponent<ExtraHealthPack>().extraHealth;
+            print("Added HP is " + other.GetComponent<ExtraHealthPack>().extraHealth);
+            //removes health pack
+            Destroy(other.gameObject);
+
+        }
+        // when player comes into contact with jump pack it will double the jump force 
+        if (other.GetComponent<JumpPack>())
+        {
+            jumpForce = jumpForce * 2;
+            print("Jump force has doubled");
+            backpack.GetComponent<Renderer>().enabled = true;
+            print("Backpack visible");
+
+            Destroy(other.gameObject);
+        }
+
     }
+
+
+
 }
