@@ -10,8 +10,15 @@ using UnityEngine;
 public class Hazard2 : MonoBehaviour
 {
     public int health = 10;
-    void Update()
+    public void LoseHealth1()
     {
+        health -= 1;
+        if (health <= 0)
+            this.gameObject.SetActive(false);
+    }
+    public void LoseHealth2()
+    {
+        health -= 3;
         if (health <= 0)
             this.gameObject.SetActive(false);
     }

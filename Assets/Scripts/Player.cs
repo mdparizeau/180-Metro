@@ -31,11 +31,13 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        rb.velocity = new Vector3(0, rb.velocity.y, rb.velocity.z);
         SpaceJump();
         if (Input.GetKey(KeyCode.A))
         {
-            moveDir = Vector3.left;
-            transform.position += moveDir * moveSpeed * Time.deltaTime;
+            //moveDir = Vector3.left;
+            //transform.position += moveDir * moveSpeed * Time.deltaTime;
+            rb.velocity = new Vector3(-moveSpeed, rb.velocity.y, rb.velocity.z);
             if(!facingLeft)
             {
                 transform.rotation = Quaternion.Euler(0, 180, 0);
@@ -46,8 +48,9 @@ public class Player : MonoBehaviour
 
         if (Input.GetKey(KeyCode.D))
         {
-            moveDir = Vector3.right;
-            transform.position += moveDir * moveSpeed * Time.deltaTime;
+            rb.velocity = new Vector3(moveSpeed, rb.velocity.y, rb.velocity.z);
+            //moveDir = Vector3.right;
+            //transform.position += moveDir * moveSpeed * Time.deltaTime;
 
             if (facingLeft)
             {
