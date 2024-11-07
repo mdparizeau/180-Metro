@@ -10,6 +10,11 @@ using UnityEngine;
 public class Hazard2 : MonoBehaviour
 {
     public int health = 10;
+    void Update()
+    {
+        if (health <= 0)
+            this.gameObject.SetActive(false);
+    }
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.GetComponent<Player>())
