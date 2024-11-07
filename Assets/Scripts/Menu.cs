@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 /*
  * Benjamnin Smith
- * 10/28/2024
+ * 11/7/2024
  * Changes the scene to the game or quits the game
  */
 public class Menu : MonoBehaviour
