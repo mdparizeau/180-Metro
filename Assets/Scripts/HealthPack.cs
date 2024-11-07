@@ -8,28 +8,13 @@ using UnityEngine;
 /// </summary>
 public class HealthPack : MonoBehaviour
 {
-    public Player playerScript;
-    public int addHP;
+    public int hpValue;
+    public float rotSpeed;
 
-    private void OnCollisionEnter(Collision collision)
+    void Update()
     {
-        if (collision.gameObject.GetComponent<Player>())
-        {
-            
-        }
+        transform.Rotate(0, rotSpeed, Time.deltaTime);
     }
 
-   /* private void OnTriggerEnter(Collider other)
-    {
-        if (other.GetComponent<Coin>())
-        {
-            //adds points to player
 
-            totalPoints += other.GetComponent<Coin>().coinValue;
-            print("Coin value is" + other.GetComponent<Coin>().coinValue);
-            //removes coin
-            Destroy(other.gameObject);
-        }
-    } Platformer reference
-   */ 
 }

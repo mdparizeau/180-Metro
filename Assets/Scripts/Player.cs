@@ -106,4 +106,21 @@ public class Player : MonoBehaviour
 
             this.enabled = false;
     }
+
+    /// <summary>
+    /// will add HP to player when it comes into contact with health pack
+    /// </summary>
+    /// <param name="other"></param>
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.GetComponent<HealthPack>())
+        {
+            //adds hp to player when it comes in contact w health pack 
+
+            health += other.GetComponent<HealthPack>().hpValue;
+            print("HP value is" + other.GetComponent<HealthPack>().hpValue);
+            //removes health pack
+            Destroy(other.gameObject);
+        }
+    }
 }
