@@ -122,5 +122,25 @@ public class Player : MonoBehaviour
             //removes health pack
             Destroy(other.gameObject);
         }
+        //when player comes into contact w extra health pack it will fully heal player and then add 100hp
+        if (other.GetComponent<ExtraHealthPack>())
+        {
+            health = 99;
+            //fully heals player   
+            
+            print("Adds 99 hp");
+            //adds 100 hp to player 
+            health += other.GetComponent<ExtraHealthPack>().extraHealth;
+            print("Added HP is " + other.GetComponent<ExtraHealthPack>().extraHealth);
+            //removes health pack
+            Destroy(other.gameObject);
+
+
+
+
+        }
     }
+
+
+  
 }

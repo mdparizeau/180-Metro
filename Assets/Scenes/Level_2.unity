@@ -1618,7 +1618,7 @@ Transform:
   m_GameObject: {fileID: 1472470576}
   serializedVersion: 2
   m_LocalRotation: {x: 0.023686629, y: -0.00989975, z: -0.00022917373, w: -0.9996704}
-  m_LocalPosition: {x: -6.937821, y: -0.8636218, z: -9.986819}
+  m_LocalPosition: {x: 11.012178, y: -0.8636218, z: -9.986819}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1869,7 +1869,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7737230561479153111, guid: ff50e0151e0ca7142aad20e1e47b0749, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.19782114
+      value: -0.19782162
       objectReference: {fileID: 0}
     - target: {fileID: 7737230561479153111, guid: ff50e0151e0ca7142aad20e1e47b0749, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1897,7 +1897,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8191819237011591771, guid: ff50e0151e0ca7142aad20e1e47b0749, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -6.74
+      value: 11.21
       objectReference: {fileID: 0}
     - target: {fileID: 8191819237011591771, guid: ff50e0151e0ca7142aad20e1e47b0749, type: 3}
       propertyPath: m_LocalPosition.y
@@ -2713,6 +2713,63 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2145293323}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1001 &3495456586628636335
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 247619044631340817, guid: d095d708ea59a694c81e2daa1e303c32, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 8.46
+      objectReference: {fileID: 0}
+    - target: {fileID: 247619044631340817, guid: d095d708ea59a694c81e2daa1e303c32, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 247619044631340817, guid: d095d708ea59a694c81e2daa1e303c32, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.44
+      objectReference: {fileID: 0}
+    - target: {fileID: 247619044631340817, guid: d095d708ea59a694c81e2daa1e303c32, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 247619044631340817, guid: d095d708ea59a694c81e2daa1e303c32, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 247619044631340817, guid: d095d708ea59a694c81e2daa1e303c32, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 247619044631340817, guid: d095d708ea59a694c81e2daa1e303c32, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 247619044631340817, guid: d095d708ea59a694c81e2daa1e303c32, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 247619044631340817, guid: d095d708ea59a694c81e2daa1e303c32, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 247619044631340817, guid: d095d708ea59a694c81e2daa1e303c32, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 948806736357510274, guid: d095d708ea59a694c81e2daa1e303c32, type: 3}
+      propertyPath: m_Name
+      value: ExtraHealthPack
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: d095d708ea59a694c81e2daa1e303c32, type: 3}
 --- !u!1001 &5466070669232989932
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2893,3 +2950,4 @@ SceneRoots:
   - {fileID: 2090848737}
   - {fileID: 1472470578}
   - {fileID: 1078159253}
+  - {fileID: 3495456586628636335}
