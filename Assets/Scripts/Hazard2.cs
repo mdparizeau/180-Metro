@@ -10,16 +10,15 @@ using UnityEngine;
 public class Hazard2 : MonoBehaviour
 {
     public int health = 10;
-    public GameObject ant;
     private Player playerScript;
-
-    private void Start()
+    void Start()
     {
-        playerScript = ant.GetComponent<Player>();
+        playerScript = GetComponent<Player>();
     }
     public void LoseHealth()
     {
-        if (playerScript.HB)
+        // doesn't work yet... How to access from player script?
+        if (playerScript.facingLeft == true)
             health -= 3;
         else health -= 1;
         if (health <= 0)

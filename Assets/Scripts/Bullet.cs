@@ -56,12 +56,12 @@ public class Bullet : MonoBehaviour
             other.GetComponent<Hazard>().LoseHealth();
             this.gameObject.SetActive(false);
         }
-        else if (other.gameObject.GetComponent<Hazard2>())
+        if (other.gameObject.GetComponent<Hazard2>())
         {
-            other.GetComponent<Hazard>().LoseHealth();
+            other.GetComponent<Hazard2>().LoseHealth();
             this.gameObject.SetActive(false);
         }
-        else if (!other.gameObject.GetComponent<Player>())
+        if (!other.gameObject.GetComponent<Player>())
                 {
                     Destroy(gameObject);
                 }
