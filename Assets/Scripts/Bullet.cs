@@ -9,6 +9,7 @@ using UnityEngine;
  */
 public class Bullet : MonoBehaviour
 {
+    private Player playerScript;
     public bool goingLeft;
     //float raycastDist = 0.5f;
     public float speed;
@@ -18,6 +19,7 @@ public class Bullet : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        playerScript = GetComponent<Player>();
         /*float halfWidth = (transform.localScale.x / 2) + 0.1f;
         rightCheck = transform.position + new Vector3(halfWidth, 0, 0);
         leftCheck = transform.position - new Vector3(halfWidth, 0, 0);*/
@@ -51,12 +53,12 @@ public class Bullet : MonoBehaviour
     {
         if (other.gameObject.GetComponent<Hazard>())
         {
-            other.GetComponent<Hazard>().LoseHealth1();
+            other.GetComponent<Hazard>().LoseHealth();
             this.gameObject.SetActive(false);
         }
         else if (other.gameObject.GetComponent<Hazard2>())
         {
-            other.GetComponent<Hazard2>().LoseHealth1();
+            other.GetComponent<Hazard>().LoseHealth();
             this.gameObject.SetActive(false);
         }
         else if (!other.gameObject.GetComponent<Player>())

@@ -10,16 +10,18 @@ using UnityEngine;
 public class Hazard : MonoBehaviour
 {
     public int health = 1;
+    public GameObject ant;
+    private Player playerScript;
 
-    public void LoseHealth1()
+    private void Start()
     {
-        health -= 1;
-        if (health <= 0)
-            this.gameObject.SetActive(false);
+        playerScript = ant.GetComponent<Player>();
     }
-    public void LoseHealth2()
+    public void LoseHealth()
     {
-        health -= 3;
+        if (playerScript.HB)
+            health -= 3;
+        else health -= 1;
         if (health <= 0)
             this.gameObject.SetActive(false);
     }
