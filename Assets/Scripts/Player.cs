@@ -20,6 +20,7 @@ public class Player : MonoBehaviour
 
     public bool facingLeft = false;
     public bool HB = false;
+    public bool invinc = false;
 
     public float deathY = -2f;
     public GameObject respawnPoint;
@@ -94,7 +95,12 @@ public class Player : MonoBehaviour
     }
     public void LoseHealth(int damageAmt)
     {
-        health -= damageAmt;
+        if(!invinc)
+        {
+            health -= damageAmt;
+            StartCoroutine(IFrame());
+        }
+        
         if (health <= 0)
             GameOver();
     }
@@ -157,6 +163,24 @@ public class Player : MonoBehaviour
 
     }
 
+    public IEnumerator IFrame()
+    {
+        invinc = true;
+        for (int i = 0; i < 50; i++)
+        {
+            if(i % 2 == 0)
+            {
+                GetComponent<MeshRenderer>().enabled = false;
+            }
+            else
+            {
+                GetComponent<MeshRenderer>().enabled = true;
+            }
+            yield return new WaitForSeconds(.1f);
+        }
 
+        invinc = false;
+        GetComponent<MeshRenderer>().enabled = true;
+    }
 
 }
