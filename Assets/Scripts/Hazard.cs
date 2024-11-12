@@ -5,19 +5,14 @@ using UnityEngine;
 /// <summary>
 /// Michael Parizeau
 /// 10/31/24
-/// Hazard script to attach to Regular Enemies
+/// Hazard script to attach to Hard Enemies
 /// <summary>
 public class Hazard : MonoBehaviour
 {
-    public int health = 1;
-    public GameObject ant;
-    private Player playerScript;
-
-    private void Start()
-    {
-        playerScript = ant.GetComponent<Player>();
-    }
-    public void LoseHealth()
+    public int health = 10;
+    public int damage = 15;
+    public Player playerScript;
+    public void Damage()
     {
         if (playerScript.HB)
             health -= 3;
@@ -29,7 +24,7 @@ public class Hazard : MonoBehaviour
     {
         if (collision.gameObject.GetComponent<Player>())
         {
-            collision.gameObject.GetComponent<Player>().LoseHealth1();
+            collision.gameObject.GetComponent<Player>().LoseHealth(damage);
         }
     }
 }

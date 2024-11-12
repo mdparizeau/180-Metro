@@ -13,8 +13,8 @@ GameObject:
   - component: {fileID: 6178704143692522875}
   - component: {fileID: 4326563973431643892}
   - component: {fileID: 541466742433055183}
-  - component: {fileID: 3614309522182264880}
   - component: {fileID: -1169925710869379504}
+  - component: {fileID: 6883589845353622779}
   m_Layer: 0
   m_Name: Enemy2
   m_TagString: Untagged
@@ -126,20 +126,6 @@ MonoBehaviour:
   rightPoint: {fileID: 4567989205189883590}
   speed: 5
   goingRight: 0
---- !u!114 &3614309522182264880
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1632790151338379313}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 75b49d07c098e43469c2b6c0295e5454, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: 10
-  ant: {fileID: 5939589243081080042, guid: ff50e0151e0ca7142aad20e1e47b0749, type: 3}
 --- !u!54 &-1169925710869379504
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -167,6 +153,21 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 0
+--- !u!114 &6883589845353622779
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1632790151338379313}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1590f8a8b8e52094ba00f644084ba41e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 10
+  damage: 35
+  ant: {fileID: 5939589243081080042, guid: ff50e0151e0ca7142aad20e1e47b0749, type: 3}
 --- !u!1 &4567989205189883590
 GameObject:
   m_ObjectHideFlags: 0

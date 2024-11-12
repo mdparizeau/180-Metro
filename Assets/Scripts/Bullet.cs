@@ -53,12 +53,7 @@ public class Bullet : MonoBehaviour
     {
         if (other.gameObject.GetComponent<Hazard>())
         {
-            other.GetComponent<Hazard>().LoseHealth();
-            this.gameObject.SetActive(false);
-        }
-        if (other.gameObject.GetComponent<Hazard2>())
-        {
-            other.GetComponent<Hazard2>().LoseHealth();
+            other.GetComponent<Hazard>().Damage();
             this.gameObject.SetActive(false);
         }
         if (!other.gameObject.GetComponent<Player>())

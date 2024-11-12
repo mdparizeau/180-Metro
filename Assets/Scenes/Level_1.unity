@@ -628,6 +628,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy2
       objectReference: {fileID: 0}
+    - target: {fileID: 6883589845353622779, guid: 3ae4bf961673b1b408eaccc545abd660, type: 3}
+      propertyPath: playerScript
+      value: 
+      objectReference: {fileID: 595908069}
     - target: {fileID: 8295348952142057570, guid: 3ae4bf961673b1b408eaccc545abd660, type: 3}
       propertyPath: m_LocalPosition.x
       value: 11
@@ -737,6 +741,14 @@ PrefabInstance:
       propertyPath: ant
       value: 
       objectReference: {fileID: 780477332}
+    - target: {fileID: 8416426726136824811, guid: fdfbf9ac4f48e1646a5581d74286c80a, type: 3}
+      propertyPath: health
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8416426726136824811, guid: fdfbf9ac4f48e1646a5581d74286c80a, type: 3}
+      propertyPath: playerScript
+      value: 
+      objectReference: {fileID: 595908069}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2147,6 +2159,10 @@ PrefabInstance:
     - target: {fileID: 8191819237011591771, guid: ff50e0151e0ca7142aad20e1e47b0749, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9106435771929151881, guid: ff50e0151e0ca7142aad20e1e47b0749, type: 3}
+      propertyPath: HB
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9106435771929151881, guid: ff50e0151e0ca7142aad20e1e47b0749, type: 3}
       propertyPath: health

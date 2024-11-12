@@ -92,15 +92,9 @@ public class Player : MonoBehaviour
 
         return isGrounded;
     }
-    public void LoseHealth1()
+    public void LoseHealth(int damageAmt)
     {
-        health-=15;
-        if (health <= 0)
-            GameOver();
-    }
-    public void LoseHealth2()
-    {
-        health -= 35;
+        health -= damageAmt;
         if (health <= 0)
             GameOver();
     }
