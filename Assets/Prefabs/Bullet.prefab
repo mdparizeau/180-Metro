@@ -120,5 +120,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c22b6eca3a37957428d20b37247fcb30, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerScript: {fileID: 9106435771929151881, guid: ff50e0151e0ca7142aad20e1e47b0749, type: 3}
+  mat: {fileID: 2100000, guid: 9a1e237f884ced34788f3bc5ee6d2c27, type: 2}
   goingLeft: 0
   speed: 10
