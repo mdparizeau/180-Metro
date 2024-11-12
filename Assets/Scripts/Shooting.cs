@@ -15,14 +15,12 @@ public class Shooting : MonoBehaviour
     public float startDelay;
     public float shotDelay;
     public bool canShoot = true;
-    private Player playerScript;
-    public GameObject Bullet1;
+    public Player playerScript; 
+    public Bullet Bullet1;
 
     // Start is called before the first frame update
     void Start()
     {
-        playerScript = GetComponent<Player>();
-        //playerScript.facingRight
     }
 
 
@@ -43,14 +41,15 @@ public class Shooting : MonoBehaviour
         {
             if(playerScript.facingLeft == true)
             {
-                Bullet1.GetComponent<Bullet>().goingLeft = playerScript.facingLeft;
-                GameObject Bullet = Instantiate(Bullet1, transform.position, Bullet1.transform.rotation);
-                
+                Bullet1.goingLeft = playerScript.facingLeft;
+                Bullet1.playerScript = playerScript;
+                GameObject Bullet = Instantiate(Bullet1.gameObject, transform.position, Bullet1.transform.rotation);
             }
             else
             {
-                Bullet1.GetComponent<Bullet>().goingLeft = playerScript.facingLeft;
-                GameObject Bullet = Instantiate(Bullet1, transform.position, Bullet1.transform.rotation);
+                Bullet1.goingLeft = playerScript.facingLeft;
+                Bullet1.playerScript = playerScript;
+                GameObject Bullet = Instantiate(Bullet1.gameObject, transform.position, Bullet1.transform.rotation);
                 
             }
         }
