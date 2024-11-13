@@ -145,20 +145,20 @@ public class Player : MonoBehaviour
 
         }
         // when player comes into contact with jump pack it will double the jump force 
-        if (other.GetComponent<JumpPack>())
-        {
-            jumpForce *= 2;
-            print("Jump force has doubled");
-            backpack.GetComponent<Renderer>().enabled = true;
-            print("Backpack visible");
+        //if (other.GetComponent<JumpPack>())
+        //{
+        //    jumpForce *= 2;
+        //    print("Jump force has doubled");
+        //    backpack.GetComponent<Renderer>().enabled = true;
+        //    print("Backpack visible");
 
-            Destroy(other.gameObject);
-        }
+            
+        //}
         if (other.GetComponent<HeavyBullet>())
         {
             HB = true;
             print("dmg 3x");
-            Destroy(other.gameObject);
+            
         }
 
     }
