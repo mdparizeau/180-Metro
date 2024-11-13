@@ -13,10 +13,13 @@ public class PlayerUI : MonoBehaviour
 {
     public Player player;
     public TMP_Text hpText;
+    public TMP_Text controls;
+    public TMP_Text activeItems;
 
     private void Update()
     {
         hpText.text = "HP: " + player.health;
-
+        controls.text = "Move: WASD\nJump: Spacebar\nShoot: LShift";
+        activeItems.text = "Active Items: ";// + 
     }
 }
