@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &8551388078848397966
+--- !u!1 &8663772881722261099
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,48 +8,48 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 8965346608569408384}
-  - component: {fileID: 7432763154059760765}
-  - component: {fileID: 8065006630482098922}
-  - component: {fileID: 948289937493132936}
-  - component: {fileID: 1043555314865718856}
+  - component: {fileID: 3391268134543843916}
+  - component: {fileID: 3942567572516004874}
+  - component: {fileID: 2366574194712461541}
+  - component: {fileID: 163586039514067668}
+  - component: {fileID: 4696798946336470889}
   m_Layer: 0
-  m_Name: Bullet
+  m_Name: Portal
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &8965346608569408384
+--- !u!4 &3391268134543843916
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8551388078848397966}
+  m_GameObject: {fileID: 8663772881722261099}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 75.16472, y: 20.838749, z: -3.6893835}
-  m_LocalScale: {x: 0.4, y: 0.3, z: 0.4}
+  m_LocalRotation: {x: -0, y: -0, z: 0.17638402, w: 0.9843215}
+  m_LocalPosition: {x: 13.35, y: -6.75, z: 8.5}
+  m_LocalScale: {x: 0.50217855, y: 1.5645343, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
---- !u!33 &7432763154059760765
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 20.318}
+--- !u!33 &3942567572516004874
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8551388078848397966}
-  m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
---- !u!23 &8065006630482098922
+  m_GameObject: {fileID: 8663772881722261099}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!23 &2366574194712461541
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8551388078848397966}
+  m_GameObject: {fileID: 8663772881722261099}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -63,7 +63,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 923dfa8d213c4474ba9dfaa67331c6ea, type: 2}
+  - {fileID: 2100000, guid: aa208a2170a813449ad85edb340db168, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -85,13 +85,13 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!136 &948289937493132936
-CapsuleCollider:
+--- !u!65 &163586039514067668
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8551388078848397966}
+  m_GameObject: {fileID: 8663772881722261099}
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -101,26 +101,22 @@ CapsuleCollider:
     m_Bits: 0
   m_LayerOverridePriority: 0
   m_IsTrigger: 1
-  m_ProvidesContacts: 1
+  m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Height: 2
-  m_Direction: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &1043555314865718856
+--- !u!114 &4696798946336470889
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8551388078848397966}
+  m_GameObject: {fileID: 8663772881722261099}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c22b6eca3a37957428d20b37247fcb30, type: 3}
+  m_Script: {fileID: 11500000, guid: 7c95b0dac0de7dd4e8d6e24ffab4ab6d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerScript: {fileID: 9106435771929151881, guid: ff50e0151e0ca7142aad20e1e47b0749, type: 3}
-  bullet_mat: {fileID: 2100000, guid: 64796eb7cfa197c4db6dde89bf9a259a, type: 2}
-  goingLeft: 0
-  speed: 10
+  teleport: {fileID: 0}
+  portal_mat: {fileID: 2100000, guid: cf123bd48c835094baef90b4337d2020, type: 2}
