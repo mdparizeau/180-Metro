@@ -10,7 +10,7 @@ using UnityEngine;
 public class Bullet : MonoBehaviour
 {
     public Player playerScript;
-    //public Material mat;
+    public Material mat;
     public bool goingLeft;
     public float speed;
 
@@ -23,8 +23,12 @@ public class Bullet : MonoBehaviour
         if (goingLeft == true)
             transform.position += speed * Vector3.left * Time.deltaTime;
         else transform.position += speed * Vector3.right * Time.deltaTime;
-        /*if (playerScript.HB)
-            this.GetComponent<Renderer>().material = mat;*/
+        if (playerScript.HB)
+        {
+
+            this.GetComponent<Renderer>().material = mat;
+            print("%%%");
+        }
     }
     private void OnTriggerEnter(Collider other)
     {

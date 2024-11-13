@@ -1308,7 +1308,8 @@ MonoBehaviour:
   startDelay: 0
   shotDelay: 0
   canShoot: 1
-  Bullet1: {fileID: 8551388078848397966, guid: 8cfd93a173ac0f745a7ea3fbd02a59b3, type: 3}
+  playerScript: {fileID: 595908069}
+  Bullet1: {fileID: 1043555314865718856, guid: 8cfd93a173ac0f745a7ea3fbd02a59b3, type: 3}
 --- !u!1 &1489668219
 GameObject:
   m_ObjectHideFlags: 3
@@ -1647,6 +1648,7 @@ GameObject:
   - component: {fileID: 1884725676}
   - component: {fileID: 1884725675}
   - component: {fileID: 1884725674}
+  - component: {fileID: 1884725677}
   m_Layer: 0
   m_Name: Portal (1)
   m_TagString: Untagged
@@ -1740,6 +1742,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1884725672}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1884725677
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1884725672}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c95b0dac0de7dd4e8d6e24ffab4ab6d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2009477128
 GameObject:
   m_ObjectHideFlags: 0
@@ -2162,7 +2176,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9106435771929151881, guid: ff50e0151e0ca7142aad20e1e47b0749, type: 3}
       propertyPath: HB
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9106435771929151881, guid: ff50e0151e0ca7142aad20e1e47b0749, type: 3}
       propertyPath: health
