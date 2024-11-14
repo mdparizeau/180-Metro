@@ -19,7 +19,7 @@ public class Player : MonoBehaviour
     private Rigidbody rb;
     public float jumpForce = 8f;
     float raycastDist = 1.2f;
-    public int currentScene = 1;
+    public int sceneIndex;
 
     public bool facingLeft = false;
     public bool HB = false;
@@ -169,24 +169,22 @@ public class Player : MonoBehaviour
             //teleports player to new scene if already touched once
             if (doorTouched)
             {
-                SceneManager.LoadScene(currentScene + 1);
-                currentScene++;
+                SwitchScene(sceneIndex);
             }
             //teleports player to teleport point 
             transform.position = other.GetComponent<Portal>().teleport.transform.position;
             print("You've been teleported");
-            doorTouched = true;
-            if (currentScene == 1)
+            if (sceneIndex-1 == 1)
                    other.GetComponent<Renderer>().material = other.GetComponent<Portal>().portal_mat;
+            StartCoroutine(pp());
+
         }
         if (other.GetComponent<Door>())
         {
             //teleports player to new scene
-            SceneManager.LoadScene(currentScene + 1);
-            currentScene++;
+            SwitchScene(sceneIndex);
         }
     }
-
     public IEnumerator IFrame()
     {
         invinc = true;
@@ -206,5 +204,13 @@ public class Player : MonoBehaviour
         invinc = false;
         GetComponent<MeshRenderer>().enabled = true;
     }
-
+    private void SwitchScene(int sceneIndex)
+    {
+        SceneManager.LoadScene(sceneIndex);
+    }
+    public IEnumerator pp()
+    {
+        yield return new WaitForSeconds(1f);
+        doorTouched = true;
+    }
 }
