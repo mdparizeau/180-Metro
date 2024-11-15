@@ -13,14 +13,16 @@ public class ExtraHealthPack : MonoBehaviour
     {
         transform.Rotate(0, rotSpeed, Time.deltaTime);
     }
-    public void OnTriggerEnter(Collider other)
+    void OnTriggerEnter(Collider other)
     {
-        if (other.GetComponent<Player>())
+        Player player = other.gameObject.GetComponent<Player>();
+        if (active && player)
         {
-            player.GetComponent<Player>().health = 99;
-            player.GetComponent<Player>().health += extraHealth;
-            
             StartCoroutine(RespawnItem());
+            player.maxHealth += extraHealth;
+            print("max health increased");
+            player.health = player.maxHealth;
+            print("increased health to match maxhealth");
         }
     }
 

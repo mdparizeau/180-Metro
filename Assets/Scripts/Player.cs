@@ -31,6 +31,7 @@ public class Player : MonoBehaviour
     public GameObject respawnPoint;
     public GameObject backpack;
     public int health = 99;
+    public int maxHealth = 99;
     // Start is called before the first frame update
     void Start()
     {
@@ -67,7 +68,7 @@ public class Player : MonoBehaviour
                 facingLeft = false;
             }
         }
-        if (transform.position.y <= deathY && health >= 15)
+        if (transform.position.y <= deathY && health > 15)
         {
             transform.position = respawnPoint.transform.position;
             backpack.GetComponent<Renderer>().enabled = false;
@@ -126,45 +127,6 @@ public class Player : MonoBehaviour
     /// <param name="other"></param>
     public void OnTriggerEnter(Collider other)
     {
-        if (other.GetComponent<HealthPack>())
-        {
-            //adds hp to player when it comes in contact w health pack 
-
-            health += other.GetComponent<HealthPack>().hpValue;
-            print("HP value is" + other.GetComponent<HealthPack>().hpValue);
-            //removes health pack
-            
-        }
-        //when player comes into contact w extra health pack it will fully heal player and then add 100hp
-        if (other.GetComponent<ExtraHealthPack>())
-        {
-            health = 99;
-            //fully heals player   
-            
-            print("Adds 99 hp");
-            //adds 100 hp to player 
-            health += other.GetComponent<ExtraHealthPack>().extraHealth;
-            print("Added HP is " + other.GetComponent<ExtraHealthPack>().extraHealth);
-            //removes health pack
-            
-
-        }
-        // when player comes into contact with jump pack it will double the jump force 
-        //if (other.GetComponent<JumpPack>())
-        //{
-        //    jumpForce *= 2;
-        //    print("Jump force has doubled");
-        //    backpack.GetComponent<Renderer>().enabled = true;
-        //    print("Backpack visible");
-
-            
-        //}
-        if (other.GetComponent<HeavyBullet>())
-        {
-            HB = true;
-            print("dmg 3x");
-            
-        }
         if (other.GetComponent<Portal>())
         {
             //teleports player to new scene if already touched once

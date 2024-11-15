@@ -17,13 +17,19 @@ public class HealthPack : MonoBehaviour
     {
         transform.Rotate(0, rotSpeed, Time.deltaTime);
     }
-    public void OnTriggerEnter(Collider other)
+    void OnTriggerEnter(Collider other)
     {
-        if (other.GetComponent<Player>())
+        
+        Player player = other.gameObject.GetComponent<Player>();
+        if (active && player)
         {
-            player.GetComponent<Player>().health += hpValue;
-            
             StartCoroutine(RespawnItem());
+            if ((player.health + hpValue) >= player.maxHealth)
+                player.health = player.maxHealth;
+            else
+            {
+                player.health += hpValue;
+            }
         }
     }
 

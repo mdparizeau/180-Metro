@@ -6,9 +6,14 @@ using UnityEngine;
 public class JumpPack : MonoBehaviour
 {
     public GameObject jumpPack;
-    private Vector3 packPosition;
     public bool available = true;
+    public float rotSpeed;
 
+    void Update()
+    {
+        transform.Rotate(0, rotSpeed, Time.deltaTime);
+        transform.Rotate(90, rotSpeed, Time.deltaTime);
+    }
 
     void OnTriggerEnter(Collider other)
     {

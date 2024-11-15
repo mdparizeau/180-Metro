@@ -6,17 +6,13 @@ public class HeavyBullet : MonoBehaviour
 {
     public bool active = true;
     public GameObject player;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public float rotSpeed;
 
-    // Update is called once per frame
     void Update()
     {
-        
+        transform.Rotate(0, rotSpeed, Time.deltaTime);
     }
+
     public void OnTriggerEnter(Collider other)
     {
         if(other.GetComponent<Player>())
@@ -26,7 +22,6 @@ public class HeavyBullet : MonoBehaviour
             StartCoroutine(RespawnItem());
         }
     }
-    
         
         public IEnumerator RespawnItem()
     {
