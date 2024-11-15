@@ -1280,7 +1280,7 @@ MonoBehaviour:
   m_Priority: 10
   m_StandbyUpdate: 2
   m_LookAt: {fileID: 0}
-  m_Follow: {fileID: 0}
+  m_Follow: {fileID: 1845905965}
   m_Lens:
     FieldOfView: 60.000004
     OrthographicSize: 5
@@ -1309,7 +1309,7 @@ Transform:
   m_GameObject: {fileID: 1027298603}
   serializedVersion: 2
   m_LocalRotation: {x: 0.023686629, y: -0.00989975, z: -0.00022917373, w: -0.9996704}
-  m_LocalPosition: {x: -0.3956423, y: -0.9472435, z: -19.973637}
+  m_LocalPosition: {x: -1.166038, y: 1.3363781, z: -9.976819}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1599,15 +1599,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8352931510207249344, guid: 0f4160fe773a02a4d88d0941d754258d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.5725746
+      value: -0.19782114
       objectReference: {fileID: 0}
     - target: {fileID: 8352931510207249344, guid: 0f4160fe773a02a4d88d0941d754258d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.7572434
+      value: -0.47362185
       objectReference: {fileID: 0}
     - target: {fileID: 8352931510207249344, guid: 0f4160fe773a02a4d88d0941d754258d, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -19.983637
+      value: -9.986819
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2199,6 +2199,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &1845905965 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6608953906343202941, guid: 0f4160fe773a02a4d88d0941d754258d, type: 3}
+  m_PrefabInstance: {fileID: 1568654632}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1884725673 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3391268134543843916, guid: 3bf525d142718254e9065e1b6492b950, type: 3}
