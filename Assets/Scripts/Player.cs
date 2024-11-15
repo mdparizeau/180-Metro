@@ -73,6 +73,7 @@ public class Player : MonoBehaviour
             transform.position = respawnPoint.transform.position;
             backpack.GetComponent<Renderer>().enabled = false;
             jumpForce = 8f;
+            HB = false;
             health -= 15;
         }
         else if (transform.position.y <= deathY && health <= 15)
@@ -145,7 +146,12 @@ public class Player : MonoBehaviour
         if (other.GetComponent<Door>())
         {
             //teleports player to new scene
-            SwitchScene(sceneIndex);
+            if (sceneIndex != 4)
+                SwitchScene(sceneIndex);
+            else if (other.GetComponent<Door>().shoot && HB && jumpForce == 16)
+            {
+                SwitchScene(sceneIndex);
+            }
         }
     }
     public IEnumerator IFrame()

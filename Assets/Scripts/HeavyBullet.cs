@@ -13,13 +13,14 @@ public class HeavyBullet : MonoBehaviour
         transform.Rotate(0, rotSpeed, Time.deltaTime);
     }
 
-    public void OnTriggerEnter(Collider other)
+    void OnTriggerEnter(Collider other)
     {
-        if(other.GetComponent<Player>())
+        Player player = other.gameObject.GetComponent<Player>();
+        if (active && player)
         {
-            player.GetComponent<Player>().HB = true;
-            print("dmg 3x");
             StartCoroutine(RespawnItem());
+            player.HB = true;
+            print("dmg 3x");
         }
     }
         

@@ -19,7 +19,6 @@ public class HealthPack : MonoBehaviour
     }
     void OnTriggerEnter(Collider other)
     {
-        
         Player player = other.gameObject.GetComponent<Player>();
         if (active && player)
         {

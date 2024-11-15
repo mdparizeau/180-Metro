@@ -12,7 +12,6 @@ public class JumpPack : MonoBehaviour
     void Update()
     {
         transform.Rotate(0, rotSpeed, Time.deltaTime);
-        transform.Rotate(90, rotSpeed, Time.deltaTime);
     }
 
     void OnTriggerEnter(Collider other)

@@ -387,7 +387,7 @@ MonoBehaviour:
   jumpForce: 8
   sceneIndex: 2
   facingLeft: 0
-  HB: 1
+  HB: 0
   invinc: 0
   deathY: -2
   respawnPoint: {fileID: 0}

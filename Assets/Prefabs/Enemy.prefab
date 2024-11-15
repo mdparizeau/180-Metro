@@ -139,7 +139,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 1
-  ant: {fileID: 5939589243081080042, guid: ff50e0151e0ca7142aad20e1e47b0749, type: 3}
+  damage: 15
+  playerScript: {fileID: 521449031875304389, guid: 0f4160fe773a02a4d88d0941d754258d, type: 3}
 --- !u!54 &3606393097623181587
 Rigidbody:
   m_ObjectHideFlags: 0

@@ -15,11 +15,17 @@ public class PlayerUI : MonoBehaviour
     public TMP_Text hpText;
     public TMP_Text controls;
     public TMP_Text activeItems;
+    public TMP_Text lvl4instructions;
 
     private void Update()
     {
         hpText.text = "HP: " + player.health;
         controls.text = "Move: WASD\nJump: Spacebar\nShoot: LShift";
-        activeItems.text = "Active Items: ";// + 
+        if (player.HB)
+            activeItems.text = "Heavy Bullets: Active";
+        else activeItems.text = " ";
+        if (player.sceneIndex == 4)
+            lvl4instructions.text = "Must have:\r\n-Jump Pack\r\n-Heavy Bullets\r\n-Shoot the Door";
+        else lvl4instructions.text = " ";
     }
 }

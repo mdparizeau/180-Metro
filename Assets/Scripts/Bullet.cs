@@ -35,6 +35,13 @@ public class Bullet : MonoBehaviour
             other.GetComponent<Hazard>().Damage();
             this.gameObject.SetActive(false);
         }
+        if (other.gameObject.GetComponent<Door>())
+        {
+            other.GetComponent<Door>().shoot = true;
+            other.GetComponent<Renderer>().material = other.GetComponent<Door>().door_mat;
+            print("door shot");
+            this.gameObject.SetActive(false);
+        }
         if (!other.gameObject.GetComponent<Player>())
                 {
                     Destroy(gameObject);

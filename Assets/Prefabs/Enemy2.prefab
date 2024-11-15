@@ -151,7 +151,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 10
   damage: 35
-  playerScript: {fileID: 0}
+  playerScript: {fileID: 521449031875304389, guid: 0f4160fe773a02a4d88d0941d754258d, type: 3}
 --- !u!114 &6118273979895690045
 MonoBehaviour:
   m_ObjectHideFlags: 0

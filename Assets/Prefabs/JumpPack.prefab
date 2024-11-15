@@ -118,4 +118,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70da2f90862302b42819664564f92ced, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  respawnPoint: 0
+  jumpPack: {fileID: 0}
+  available: 1
+  rotSpeed: 2
