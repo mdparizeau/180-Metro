@@ -99,6 +99,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hpValue: 50
   rotSpeed: 2
+  active: 1
+  player: {fileID: 2014269158673972021, guid: 0f4160fe773a02a4d88d0941d754258d, type: 3}
 --- !u!65 &5443359316367884726
 BoxCollider:
   m_ObjectHideFlags: 0

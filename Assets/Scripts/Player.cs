@@ -25,6 +25,7 @@ public class Player : MonoBehaviour
     public bool HB = false;
     public bool invinc = false;
     private bool doorTouched = false;
+    
 
     public float deathY = -2f;
     public GameObject respawnPoint;
@@ -123,7 +124,7 @@ public class Player : MonoBehaviour
     /// will add HP to player when it comes into contact with health pack
     /// </summary>
     /// <param name="other"></param>
-    private void OnTriggerEnter(Collider other)
+    public void OnTriggerEnter(Collider other)
     {
         if (other.GetComponent<HealthPack>())
         {
@@ -132,7 +133,7 @@ public class Player : MonoBehaviour
             health += other.GetComponent<HealthPack>().hpValue;
             print("HP value is" + other.GetComponent<HealthPack>().hpValue);
             //removes health pack
-            Destroy(other.gameObject);
+            
         }
         //when player comes into contact w extra health pack it will fully heal player and then add 100hp
         if (other.GetComponent<ExtraHealthPack>())
@@ -145,7 +146,7 @@ public class Player : MonoBehaviour
             health += other.GetComponent<ExtraHealthPack>().extraHealth;
             print("Added HP is " + other.GetComponent<ExtraHealthPack>().extraHealth);
             //removes health pack
-            Destroy(other.gameObject);
+            
 
         }
         // when player comes into contact with jump pack it will double the jump force 
@@ -213,4 +214,5 @@ public class Player : MonoBehaviour
         yield return new WaitForSeconds(1f);
         doorTouched = true;
     }
+   
 }
