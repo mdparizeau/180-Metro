@@ -3152,6 +3152,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3002224180839027391, guid: 97b78df4aba5336459e93119efd51156, type: 3}
+      propertyPath: m_VertexColorAlwaysGammaSpace
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3002224180839027391, guid: 97b78df4aba5336459e93119efd51156, type: 3}
+      propertyPath: m_AdditionalShaderChannelsFlag
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3387160958090175485, guid: 97b78df4aba5336459e93119efd51156, type: 3}
       propertyPath: m_Name
       value: HPUI
