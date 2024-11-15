@@ -120,3 +120,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   extraHealth: 100
   rotSpeed: 2
+  player: {fileID: 2014269158673972021, guid: 0f4160fe773a02a4d88d0941d754258d, type: 3}
+  active: 1
