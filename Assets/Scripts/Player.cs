@@ -148,7 +148,7 @@ public class Player : MonoBehaviour
             //teleports player to new scene
             if (sceneIndex != 4)
                 SwitchScene(sceneIndex);
-            else if (other.GetComponent<Door>().shoot && HB && jumpForce == 16)
+            else if (other.GetComponent<Door>().shoot == true)
             {
                 SwitchScene(sceneIndex);
             }

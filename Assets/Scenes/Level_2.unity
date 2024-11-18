@@ -149,7 +149,7 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 12090193}
-  m_Material: {fileID: 13400000, guid: 85d9eb79f504ea1408f8bd6f23485f86, type: 2}
+  m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -304,7 +304,7 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 121617019}
-  m_Material: {fileID: 13400000, guid: 85d9eb79f504ea1408f8bd6f23485f86, type: 2}
+  m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -643,7 +643,7 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 249728388}
-  m_Material: {fileID: 13400000, guid: 85d9eb79f504ea1408f8bd6f23485f86, type: 2}
+  m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -858,7 +858,7 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 589332732}
-  m_Material: {fileID: 13400000, guid: 85d9eb79f504ea1408f8bd6f23485f86, type: 2}
+  m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -1057,7 +1057,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8295348952142057570, guid: fdfbf9ac4f48e1646a5581d74286c80a, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.37
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8295348952142057570, guid: fdfbf9ac4f48e1646a5581d74286c80a, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1164,7 +1164,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8295348952142057570, guid: fdfbf9ac4f48e1646a5581d74286c80a, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.06
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8295348952142057570, guid: fdfbf9ac4f48e1646a5581d74286c80a, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1244,7 +1244,7 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1066465341}
-  m_Material: {fileID: 13400000, guid: 85d9eb79f504ea1408f8bd6f23485f86, type: 2}
+  m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -1380,7 +1380,7 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1270894061}
-  m_Material: {fileID: 13400000, guid: 85d9eb79f504ea1408f8bd6f23485f86, type: 2}
+  m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -1470,7 +1470,7 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1375824398}
-  m_Material: {fileID: 13400000, guid: 85d9eb79f504ea1408f8bd6f23485f86, type: 2}
+  m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -2117,7 +2117,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8295348952142057570, guid: fdfbf9ac4f48e1646a5581d74286c80a, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.99
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8295348952142057570, guid: fdfbf9ac4f48e1646a5581d74286c80a, type: 3}
       propertyPath: m_LocalRotation.w
@@ -2239,7 +2239,7 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1899769990}
-  m_Material: {fileID: 13400000, guid: 85d9eb79f504ea1408f8bd6f23485f86, type: 2}
+  m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -2421,7 +2421,7 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1995865131}
-  m_Material: {fileID: 13400000, guid: 85d9eb79f504ea1408f8bd6f23485f86, type: 2}
+  m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -2637,7 +2637,7 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2145293323}
-  m_Material: {fileID: 13400000, guid: 85d9eb79f504ea1408f8bd6f23485f86, type: 2}
+  m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -2875,7 +2875,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8295348952142057570, guid: fdfbf9ac4f48e1646a5581d74286c80a, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.08
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8295348952142057570, guid: fdfbf9ac4f48e1646a5581d74286c80a, type: 3}
       propertyPath: m_LocalRotation.w
@@ -3055,6 +3055,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2807762847166305711, guid: 0f4160fe773a02a4d88d0941d754258d, type: 3}
+      propertyPath: m_ClearFlags
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5548466109241878643, guid: 0f4160fe773a02a4d88d0941d754258d, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 13400000, guid: 85d9eb79f504ea1408f8bd6f23485f86, type: 2}
     - target: {fileID: 6608953906343202941, guid: 0f4160fe773a02a4d88d0941d754258d, type: 3}
       propertyPath: m_LocalPosition.x
       value: -7.56

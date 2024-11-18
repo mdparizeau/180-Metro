@@ -25,7 +25,7 @@ public class PlayerUI : MonoBehaviour
             activeItems.text = "Heavy Bullets: Active";
         else activeItems.text = " ";
         if (player.sceneIndex == 4)
-            lvl4instructions.text = "Must have:\r\n-Jump Pack\r\n-Heavy Bullets\r\n-Shoot the Door";
+            lvl4instructions.text = "Must have:\r\n-Jump Pack\r\n-Heavy Bullets\r\nThen:\r\n-Shoot the Door";
         else lvl4instructions.text = " ";
     }
 }

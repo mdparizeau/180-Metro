@@ -37,9 +37,12 @@ public class Bullet : MonoBehaviour
         }
         if (other.gameObject.GetComponent<Door>())
         {
-            other.GetComponent<Door>().shoot = true;
-            other.GetComponent<Renderer>().material = other.GetComponent<Door>().door_mat;
-            print("door shot");
+            if (playerScript.HB && playerScript.jumpForce == 16)
+            {
+                other.GetComponent<Door>().shoot = true;
+                other.GetComponent<Renderer>().material = other.GetComponent<Door>().door_mat;
+                print("door shot");
+            }
             this.gameObject.SetActive(false);
         }
         if (!other.gameObject.GetComponent<Player>())
