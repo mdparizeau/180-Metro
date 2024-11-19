@@ -21,6 +21,8 @@ public class Player : MonoBehaviour
     float raycastDist = 1.2f;
     public int sceneIndex;
 
+    public int counter = 0;
+
     public bool facingLeft = false;
     public bool HB = false;
     public bool invinc = false;
@@ -41,6 +43,9 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (counter == 14)
+            SceneManager.LoadScene(5);
+
         rb.velocity = new Vector3(0, rb.velocity.y, rb.velocity.z); // Handles movement so the player does not phase through walls
         SpaceJump();
         // Handles the rotation of the player when they move left 

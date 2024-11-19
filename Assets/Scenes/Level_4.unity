@@ -179,6 +179,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8416426726136824811, guid: fdfbf9ac4f48e1646a5581d74286c80a, type: 3}
+      propertyPath: numOfEnemies
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 8416426726136824811, guid: fdfbf9ac4f48e1646a5581d74286c80a, type: 3}
+      propertyPath: playerScript
+      value: 
+      objectReference: {fileID: 921012159}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -200,6 +208,10 @@ PrefabInstance:
     - target: {fileID: 1632790151338379313, guid: 3ae4bf961673b1b408eaccc545abd660, type: 3}
       propertyPath: m_Name
       value: Enemy2 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6883589845353622779, guid: 3ae4bf961673b1b408eaccc545abd660, type: 3}
+      propertyPath: numOfEnemies
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 6883589845353622779, guid: 3ae4bf961673b1b408eaccc545abd660, type: 3}
       propertyPath: playerScript
@@ -266,6 +278,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy2 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 6883589845353622779, guid: 3ae4bf961673b1b408eaccc545abd660, type: 3}
+      propertyPath: numOfEnemies
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 6883589845353622779, guid: 3ae4bf961673b1b408eaccc545abd660, type: 3}
+      propertyPath: playerScript
+      value: 
+      objectReference: {fileID: 921012159}
     - target: {fileID: 8295348952142057570, guid: 3ae4bf961673b1b408eaccc545abd660, type: 3}
       propertyPath: m_LocalScale.z
       value: 1.6861
@@ -748,6 +768,10 @@ PrefabInstance:
       value: Enemy2 (3)
       objectReference: {fileID: 0}
     - target: {fileID: 6883589845353622779, guid: 3ae4bf961673b1b408eaccc545abd660, type: 3}
+      propertyPath: numOfEnemies
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 6883589845353622779, guid: 3ae4bf961673b1b408eaccc545abd660, type: 3}
       propertyPath: playerScript
       value: 
       objectReference: {fileID: 921012159}
@@ -961,6 +985,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8416426726136824811, guid: fdfbf9ac4f48e1646a5581d74286c80a, type: 3}
+      propertyPath: numOfEnemies
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 8416426726136824811, guid: fdfbf9ac4f48e1646a5581d74286c80a, type: 3}
+      propertyPath: playerScript
+      value: 
+      objectReference: {fileID: 921012159}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1120,8 +1152,16 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 521449031875304389, guid: 0f4160fe773a02a4d88d0941d754258d, type: 3}
+      propertyPath: counter
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 521449031875304389, guid: 0f4160fe773a02a4d88d0941d754258d, type: 3}
       propertyPath: jumpForce
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 521449031875304389, guid: 0f4160fe773a02a4d88d0941d754258d, type: 3}
+      propertyPath: sceneIndex
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 521449031875304389, guid: 0f4160fe773a02a4d88d0941d754258d, type: 3}
       propertyPath: respawnPoint
@@ -1389,6 +1429,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8416426726136824811, guid: fdfbf9ac4f48e1646a5581d74286c80a, type: 3}
+      propertyPath: numOfEnemies
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 8416426726136824811, guid: fdfbf9ac4f48e1646a5581d74286c80a, type: 3}
+      propertyPath: playerScript
+      value: 
+      objectReference: {fileID: 921012159}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1806,6 +1854,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8416426726136824811, guid: fdfbf9ac4f48e1646a5581d74286c80a, type: 3}
+      propertyPath: numOfEnemies
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 8416426726136824811, guid: fdfbf9ac4f48e1646a5581d74286c80a, type: 3}
+      propertyPath: playerScript
+      value: 
+      objectReference: {fileID: 921012159}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1867,6 +1923,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8416426726136824811, guid: fdfbf9ac4f48e1646a5581d74286c80a, type: 3}
+      propertyPath: numOfEnemies
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 8416426726136824811, guid: fdfbf9ac4f48e1646a5581d74286c80a, type: 3}
+      propertyPath: playerScript
+      value: 
+      objectReference: {fileID: 921012159}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1883,6 +1947,10 @@ PrefabInstance:
     - target: {fileID: 1632790151338379313, guid: 3ae4bf961673b1b408eaccc545abd660, type: 3}
       propertyPath: m_Name
       value: Enemy2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6883589845353622779, guid: 3ae4bf961673b1b408eaccc545abd660, type: 3}
+      propertyPath: numOfEnemies
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 6883589845353622779, guid: 3ae4bf961673b1b408eaccc545abd660, type: 3}
       propertyPath: playerScript
@@ -2208,6 +2276,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8416426726136824811, guid: fdfbf9ac4f48e1646a5581d74286c80a, type: 3}
+      propertyPath: numOfEnemies
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 8416426726136824811, guid: fdfbf9ac4f48e1646a5581d74286c80a, type: 3}
+      propertyPath: playerScript
+      value: 
+      objectReference: {fileID: 921012159}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2510,6 +2586,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8416426726136824811, guid: fdfbf9ac4f48e1646a5581d74286c80a, type: 3}
+      propertyPath: numOfEnemies
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 8416426726136824811, guid: fdfbf9ac4f48e1646a5581d74286c80a, type: 3}
+      propertyPath: playerScript
+      value: 
+      objectReference: {fileID: 921012159}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2791,6 +2875,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8416426726136824811, guid: fdfbf9ac4f48e1646a5581d74286c80a, type: 3}
+      propertyPath: numOfEnemies
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 8416426726136824811, guid: fdfbf9ac4f48e1646a5581d74286c80a, type: 3}
+      propertyPath: playerScript
+      value: 
+      objectReference: {fileID: 921012159}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2962,6 +3054,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8416426726136824811, guid: fdfbf9ac4f48e1646a5581d74286c80a, type: 3}
+      propertyPath: numOfEnemies
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 8416426726136824811, guid: fdfbf9ac4f48e1646a5581d74286c80a, type: 3}
+      propertyPath: playerScript
+      value: 
+      objectReference: {fileID: 921012159}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3222,6 +3322,10 @@ PrefabInstance:
     - target: {fileID: 1632790151338379313, guid: 3ae4bf961673b1b408eaccc545abd660, type: 3}
       propertyPath: m_Name
       value: Enemy2 (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6883589845353622779, guid: 3ae4bf961673b1b408eaccc545abd660, type: 3}
+      propertyPath: numOfEnemies
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 6883589845353622779, guid: 3ae4bf961673b1b408eaccc545abd660, type: 3}
       propertyPath: playerScript
