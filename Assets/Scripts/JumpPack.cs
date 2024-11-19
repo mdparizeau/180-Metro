@@ -19,7 +19,7 @@ public class JumpPack : MonoBehaviour
         transform.Rotate(0, rotSpeed, Time.deltaTime);
     }
     /// <summary>
-    /// Causes the player to puck up the item and then respawn the item after a delay
+    /// Causes the player to pick up the item and then respawn the item after a delay
     /// </summary>
     /// <param name="other"></param>
     void OnTriggerEnter(Collider other)
@@ -30,7 +30,7 @@ public class JumpPack : MonoBehaviour
             StartCoroutine(RespawnPack());
             player.jumpForce *= 2;
             print("Jump force has doubled");
-            player.backpack.GetComponent<Renderer>().enabled = true;
+            player.backpack.GetComponent<Renderer>().enabled = true; // Causes the jump pack to be visible after picking it up
             print("Backpack visible");
         }
 
