@@ -22,11 +22,15 @@ public class Menu : MonoBehaviour
     {
         
     }
-
+    /// <summary>
+    /// Switches the scene to a specified scene index set in the inspector when the ui button for it is pressed
+    /// </summary>
+    /// <param name="sceneIndex"></param>
     public void SwitchScene(int sceneIndex)
     {
         SceneManager.LoadScene(sceneIndex);
     }
+    // Quits the game when the ui button for it is pressed
     public void Quit()
     {
         print("Quit Game");

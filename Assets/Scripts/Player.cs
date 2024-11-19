@@ -8,7 +8,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 /// <summary>
-/// Michael Parizeau
+/// Michael Parizeau, Benjamin Smith
 /// 10/31/24
 /// Player movement, health, and spawning
 /// </summary>
@@ -41,8 +41,9 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        rb.velocity = new Vector3(0, rb.velocity.y, rb.velocity.z);
+        rb.velocity = new Vector3(0, rb.velocity.y, rb.velocity.z); // Handles movement so the player does not phase through walls
         SpaceJump();
+        // Handles the rotation of the player when they move left 
         if (Input.GetKey(KeyCode.A))
         {
             //moveDir = Vector3.left;
@@ -55,7 +56,7 @@ public class Player : MonoBehaviour
             }
             
         }
-
+        // Handles the rotation of the player when they move left
         if (Input.GetKey(KeyCode.D))
         {
             rb.velocity = new Vector3(moveSpeed, rb.velocity.y, rb.velocity.z);
@@ -68,6 +69,7 @@ public class Player : MonoBehaviour
                 facingLeft = false;
             }
         }
+        // Causes the player to respawn, take damage and lose both the jump pack and heavy bullets when they drop to a certain y value 
         if (transform.position.y <= deathY && health > 15)
         {
             transform.position = respawnPoint.transform.position;
@@ -76,9 +78,12 @@ public class Player : MonoBehaviour
             HB = false;
             health -= 15;
         }
-        else if (transform.position.y <= deathY && health <= 15)
+        else if (transform.position.y <= deathY && health <= 15) // Kills the player and shows the game over screen when the player loses all of their health from falling off the level
             GameOver();
     }
+    /// <summary>
+    /// Causes the player to jump if they press the spacebar and are on the ground
+    /// </summary>
     private void SpaceJump()
     {
         if (Input.GetKeyDown(KeyCode.Space) && IsGrounded())
@@ -88,6 +93,10 @@ public class Player : MonoBehaviour
         }
         Debug.DrawRay(transform.position, Vector3.down * raycastDist, Color.red);
     }
+    /// <summary>
+    /// Checks whether the player is on the ground by using a raycast
+    /// </summary>
+    /// <returns></returns>
     private bool IsGrounded()
     {
         bool isGrounded = false;
@@ -100,6 +109,10 @@ public class Player : MonoBehaviour
 
         return isGrounded;
     }
+    /// <summary>
+    /// Causes the player to lose health bases on the damageAmt variable and checks and causes the IFrame function on taking damage
+    /// </summary>
+    /// <param name="damageAmt"></param>
     public void LoseHealth(int damageAmt)
     {
         if(!invinc)
@@ -108,10 +121,12 @@ public class Player : MonoBehaviour
             StartCoroutine(IFrame());
         }
         
-        if (health <= 0)
+        if (health <= 0) // Checks if the player health is less than or equal to zero and if true, transitions to the game over screen
             GameOver();
     }
-    
+    /// <summary>
+    /// Transitions to the game over screen and disables the player
+    /// </summary>
     private void GameOver()
     {
             // Game Over
@@ -154,6 +169,10 @@ public class Player : MonoBehaviour
             }
         }
     }
+    /// <summary>
+    /// Causes the player to blink repeatedly and prevents the player from taking damage from enemies while blinking
+    /// </summary>
+    /// <returns></returns>
     public IEnumerator IFrame()
     {
         invinc = true;
@@ -177,6 +196,10 @@ public class Player : MonoBehaviour
     {
         SceneManager.LoadScene(sceneIndex);
     }
+    /// <summary>
+    /// Causes the doorTouched variable to become true after a delay
+    /// </summary>
+    /// <returns></returns>
     public IEnumerator pp()
     {
         yield return new WaitForSeconds(1f);

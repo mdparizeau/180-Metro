@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 /// <summary>
-/// Cetz, Zulema 
+/// Cetz, Zulema, Benjamin S.
 /// 11/5/24
 /// Handles code relating to health pack when player collides with health pack it will gain X amount of health. Health will be set in the inspector. 
 /// </summary>
@@ -15,8 +15,13 @@ public class HealthPack : MonoBehaviour
 
     void Update()
     {
+        // Rotates the item
         transform.Rotate(0, rotSpeed, Time.deltaTime);
     }
+    /// <summary>
+    /// Causes the player to pick up the item on collision and then respawns the item after a delay
+    /// </summary>
+    /// <param name="other"></param>
     void OnTriggerEnter(Collider other)
     {
         Player player = other.gameObject.GetComponent<Player>();
@@ -32,7 +37,10 @@ public class HealthPack : MonoBehaviour
         }
     }
 
-
+    /// <summary>
+    /// Respawns the item after a delay
+    /// </summary>
+    /// <returns></returns>
     public IEnumerator RespawnItem()
     {
         active = false;

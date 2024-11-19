@@ -31,7 +31,9 @@ public class EnemyMovement : MonoBehaviour
     {
         MoveEnemy();
     }
-
+    /// <summary>
+    /// Causes the enemies to move right and then move left after reaching a certain position
+    /// </summary>
     private void MoveEnemy()
     {
         if (goingRight)

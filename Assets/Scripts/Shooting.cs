@@ -29,6 +29,7 @@ public class Shooting : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // Causes the player to shoot a bullet
         Firing();
     }
     /// <summary>

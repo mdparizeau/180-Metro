@@ -2,7 +2,11 @@ using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+/*
+ * Benjamin S, Zulema C.
+ * 11/18/2024
+ * Handles the jump pack pick up and respawn behaviors
+ */
 public class JumpPack : MonoBehaviour
 {
     public GameObject jumpPack;
@@ -11,9 +15,13 @@ public class JumpPack : MonoBehaviour
 
     void Update()
     {
+        //Rotates the item
         transform.Rotate(0, rotSpeed, Time.deltaTime);
     }
-
+    /// <summary>
+    /// Causes the player to puck up the item and then respawn the item after a delay
+    /// </summary>
+    /// <param name="other"></param>
     void OnTriggerEnter(Collider other)
     {
         Player player = other.gameObject.GetComponent<Player>();
@@ -28,7 +36,10 @@ public class JumpPack : MonoBehaviour
 
 
     }
-
+    /// <summary>
+    /// Respawns the item after a delay
+    /// </summary>
+    /// <returns></returns>
    public IEnumerator RespawnPack()
     {
         available = false;

@@ -28,13 +28,19 @@ public class Bullet : MonoBehaviour
             this.GetComponent<Renderer>().material = bullet_mat;
         }
     }
+    /// <summary>
+    /// Causes the bullet to do different things when colliding with various game objects
+    /// </summary>
+    /// <param name="other"></param>
     private void OnTriggerEnter(Collider other)
     {
+        // Causes the bullet to harm the enemies that have the hazard script
         if (other.gameObject.GetComponent<Hazard>())
         {
             other.GetComponent<Hazard>().Damage();
             this.gameObject.SetActive(false);
         }
+        // Causes the bullet to open a door when player has both power ups
         if (other.gameObject.GetComponent<Door>())
         {
             if (playerScript.HB && playerScript.jumpForce == 16)
@@ -45,6 +51,7 @@ public class Bullet : MonoBehaviour
             }
             this.gameObject.SetActive(false);
         }
+        // Causes the bullet to despawn from hitting any non-player object
         if (!other.gameObject.GetComponent<Player>())
                 {
                     Destroy(gameObject);
