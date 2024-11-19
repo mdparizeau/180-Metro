@@ -22,7 +22,6 @@ public class Player : MonoBehaviour
     public int sceneIndex;
 
     public int counter = 0;
-    private bool heHeHeHA = true;
 
     public bool facingLeft = false;
     public bool HB = false;

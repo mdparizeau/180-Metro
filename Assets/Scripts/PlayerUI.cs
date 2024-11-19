@@ -26,6 +26,8 @@ public class PlayerUI : MonoBehaviour
         else activeItems.text = " ";
         if (player.sceneIndex == 4) // shows instructions for the player for beating the fourth level when they are on it 
             lvl4instructions.text = "Must have:\r\n-Jump Pack\r\n-Heavy Bullets\r\nThen:\r\n-Shoot the Door";
+        else if (player.sceneIndex == 5)
+            lvl4instructions.text = "Must destroy\r\nall enemies\r\nto win the Game!";
         else lvl4instructions.text = " ";
     }
 }
