@@ -45,7 +45,7 @@ public class Player : MonoBehaviour
     void Update()
     {
         if (counter == 14)
-            SceneManager.LoadScene(5);
+            SceneManager.LoadScene(6);
 
         rb.velocity = new Vector3(0, rb.velocity.y, rb.velocity.z); // Handles movement so the player does not phase through walls
         SpaceJump();
