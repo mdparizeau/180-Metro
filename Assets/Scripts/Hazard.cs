@@ -13,7 +13,7 @@ public class Hazard : MonoBehaviour
     public int damage = 15;
     public Player playerScript;
     /// <summary>
-    /// Causes the player to take damage 
+    /// Causes the enemy to take damage 
     /// </summary>
     public void Damage()
     {
